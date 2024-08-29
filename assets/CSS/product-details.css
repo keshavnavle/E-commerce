@@ -1,0 +1,41 @@
+@import "colors.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.product__description .star__icon {
+  color: var(--bg-color, #e2e8f0);
+}
+.product__description .star__icon.active {
+  color: #ffad33;
+}
+.product__description .colours__selection span.active {
+  outline: 2px solid;
+  border: 2px solid #fff;
+}
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.circle.color1 {
+  background-color: #a0bce0;
+}
+.circle.color2 {
+  background-color: #e07575;
+}
+.btn__buy-now {
+  background-color: var(--secondary-color) !important;
+}
+.secondary__color__border {
+  border-color: var(--secondary-color) !important;
+}
+.btn__count {
+  color: var(--secondary-color);
+  background-color: #f0f0f0;
+}
+.w-35 {
+  width: 35%;
+}

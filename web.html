@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/CSS/nav-footer.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+
+<body>
+    <div data-include="navbar.html"></div>
+    <main>
+        <section class="home mt-3">
+            <div class="container">
+                <form class="d-flex my-4 mx-lg-auto" role="search">
+                    <input id="search-input" class="form-control input__search me-2 shadow-none" type="search"
+                        placeholder="What are you looking for?" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass m-auto fs-5 search__icon"></i>
+                    <button id="search-button" class="btn btn__search" type="submit">Search</button>
+                </form>
+                <div class="row">
+                    <div class="col-lg-3 col home__left-side mb-3">
+                        <h2 class="filter-sort___header pt-2">Filter & Sort</h2>
+                        <div class="accordion" id="filterAndSort">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="category">
+                                    <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#allCategories" aria-expanded="true"
+                                        aria-controls="allCategories">
+                                        Categories
+                                    </button>
+                                </h2>
+                                <div id="allCategories" class="accordion-collapse collapse show"
+                                    aria-labelledby="category" data-bs-parent="#filterAndSort">
+                                    <div class="accordion-body" id="categories-warapper">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-2">
+                                <h2 class="accordion-header" id="price">
+                                    <button class="accordion-button shadow-none collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#allPrices" aria-expanded="false"
+                                        aria-controls="allPrices">
+                                        Prices
+                                    </button>
+                                </h2>
+                                <div id="allPrices" class="accordion-collapse collapse" aria-labelledby="price"
+                                    data-bs-parent="#filterAndSort">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="asc">
+                                            <label class="form-check-label" for="asc">
+                                                Low to High (ASC)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="des">
+                                            <label class="form-check-label" for="des">
+                                                High to Low (DES)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 mb-3">
+                        <img src="./assets/images/home/home-img.png" class="w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products my-5">
+            <div class="container">
+                <div class="row mb-4 gx-4" id="card">
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <div data-include="footer.html"></div>
+    <script src="./assets/JS/bootstrap.min.js"></script>
+    <script src="./assets/JS/nav-footer.js"></script>
+    <script type="module" src="./assets/JS/main.js"></script>
+</body>
+
+</html>
